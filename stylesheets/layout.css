@@ -1,23 +1,26 @@
-/* .fon.block1 {
-  width: 1290px;
-  height: 870px;
-  background-size: cover;
-  background-position: center;
-  cursor: pointer;
-  transition: background-image 0.5s ease-in-out;
-  background-image: url(../images/fon1block1.svg);
-}
+/* body {
+  .fonblock1 {
+    width: 1290px;
+    height: 870px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: background-image 0.5s ease-in-out;
+    background-image: url(../images/fon1block1.svg);
+  }
 
-#poster.clicked-1 {
-  background-image: url(../images/fon2block1.svg);
-}
+  #poster.clicked-1 {
+    background-image: url(../images/fon2block1.svg);
+  }
 
-#poster.clicked-2 {
-  background-image: url(../images/fon3block1.svg);
+  #poster.clicked-2 {
+    background-image: url(../images/fon3block1.svg);
+  }
+  * {
+    box-sizing: border-box;
+  }
 } */
-* {
-  box-sizing: border-box;
-}
+
 .move-area {
   width: 100%;
   height: 100vh;
