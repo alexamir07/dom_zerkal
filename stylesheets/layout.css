@@ -1,6 +1,11 @@
 body {
   margin: 0;
   padding: 0;
+  cursor: url(../images/kursor1.svg) 35 50, auto;
+}
+
+body.clicked {
+  cursor: url(../images/kursor2.svg) 35 50, auto;
 }
 /* 1 БЛОК */
 /* Основной контейнер блок 1 */
