@@ -12,7 +12,9 @@ body.clicked {
 .container {
   position: relative;
   width: 100vw;
-  height: 162.135vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Фоновое изображение блок 1 */
@@ -132,4 +134,36 @@ body.clicked {
   background-image: url(../images/righthand.svg);
   background-size: cover;
   background-position: center;
+}
+/* 4 БЛОК */
+.fourth-background {
+  position: relative;
+  width: 100vw;
+  height: 73.17vw;
+  background-image: url(../images/fonblock4.svg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; /* Добавляем, чтобы скрыть выходящее за границы */
+}
+
+.puzzle-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(-10vw); /* -320/1000 * 100vw */
+  width: 50.5vw;
+  height: 43.89vw;
+  background-image: url(../images/razbito.svg);
+  background-size: cover;
+  background-position: center;
+}
+/* 5 БЛОК */
+.fifth-background {
+  position: relative;
+  width: 100vw;
+  height: 41.25vw;
+  background-image: url(../images/fonblock5.svg);
+  background-size: cover;
+  background-position: center;
+  margin-top: -20.67vw;
 }
