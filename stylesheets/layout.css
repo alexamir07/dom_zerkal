@@ -1,54 +1,130 @@
-/* body {
-  .fonblock1 {
-    width: 1290px;
-    height: 870px;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    transition: background-image 0.5s ease-in-out;
-    background-image: url(../images/fon1block1.svg);
-  }
+body {
+  margin: 0;
+  padding: 0;
+}
+/* 1 БЛОК */
+/* Основной контейнер блок 1 */
+.container {
+  position: relative;
+  width: 100vw;
+  height: 162.135vw;
+}
 
-  #poster.clicked-1 {
-    background-image: url(../images/fon2block1.svg);
-  }
+/* Фоновое изображение блок 1 */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 51.04vw;
 
-  #poster.clicked-2 {
-    background-image: url(../images/fon3block1.svg);
-  }
-  * {
-    box-sizing: border-box;
-  }
-} */
+  background-image: url(../images/fon1block1.svg);
+  background-size: cover;
+  background-position: center;
+}
 
-.move-area {
-  width: 100%;
-  height: 100vh;
+/* девочка */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 51.04vw;
+  background-image: url(../images/devochka.svg);
+  background-size: cover;
+  background-position: center;
+}
+/* 2 БЛОК */
+/* Второй блок с фоновым изображением */
+.second-background {
+  position: relative;
+  top: 51.04vw;
+  /* left: 0; */
+  width: 100vw;
+  height: 66.666vw;
+  background-image: url(../images/fonblock2.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Контейнер для картин */
+.paintings {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
   display: flex;
   justify-content: center;
-  align-items: center;
+  gap: 2vw;
 }
-.container {
-  width: 70px;
+
+/* Первая картина */
+.painting-1 {
+  width: 25.52vw;
+  height: 32.81vw;
+  background-image: url(../images/zerkalo1f1.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Вторая картина */
+.painting-2 {
+  width: 23.95vw;
+  height: 37.5vw;
+  background-image: url(../images/zerkalo2f1.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Третья картина */
+.painting-3 {
+  width: 27.6vw;
+  height: 33.85vw;
+  background-image: url(../images/zerkalo3f1.svg);
+  background-size: cover;
+  background-position: center;
+}
+/* 3 БЛОК */
+/* Третий блок с фоновым изображением */
+.third-background {
+  position: relative;
+  top: 117.708vw;
+  left: 0;
+  width: 100vw;
+  height: 44.42vw;
+  background-image: url(../images/fonblock3.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Контейнер для рук */
+.hands {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 10vw;
 }
-.eye {
-  position: relative;
-  border-radius: 100%;
-  width: 30px;
-  height: 30px;
-  background-color: #faf9f2;
+
+/* Левая рука */
+.left-hand {
+  width: 75.78vw;
+  height: 19.79vw;
+  background-image: url(../images/lefthand.svg);
+  background-size: cover;
+  background-position: center;
 }
-.eye::after {
-  content: '';
-  width: 10px;
-  height: 10px;
-  background-color: black;
-  /* background-image: url(../images/zrachok.svg); */
-  border-radius: 100%;
-  position: absolute;
-  top: 13px;
-  left: 10px;
-  z-index: 1;
+
+/* Правая рука */
+.right-hand {
+  width: 80.93vw;
+  height: 19.79vw;
+  background-image: url(../images/righthand.svg);
+  background-size: cover;
+  background-position: center;
 }
