@@ -10,34 +10,36 @@ body.clicked {
 /* 1 БЛОК */
 
 /* Глаза */
-.move-area {
-  width: 100%;
-  height: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.container {
-  width: 70px;
+.eyes {
+  width: 18.41vw;
+  height: 8.41vw;
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  left: calc(42% - 2.86vw);
+  top: 30%;
+  z-index: -1;
 }
 .eye {
   position: relative;
   border-radius: 100%;
-  width: 30px;
-  height: 30px;
-  background-color: cornsilk;
+  width: 6.5vw;
+  height: 6.5vw;
+  background-color: white;
 }
-.eye ::after {
+.eye:nth-of-type(1) {
+  align-self: flex-end;
+}
+.eye::after {
   content: '';
-  width: 10px;
-  height: 10px;
+  width: 1.8vw;
+  height: 1.8vw;
   background-image: url(../images/zrachok.svg);
+  background-size: cover;
   border-radius: 100%;
   position: absolute;
-  top: 13px;
-  left: 10px;
+  top: 3vw;
+  left: 1vw;
   z-index: 1;
 }
 
@@ -50,50 +52,46 @@ body.clicked {
   flex-direction: column;
 }
 
-/* Фоновое изображение блок 1 */
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 51.04vw;
-
-  background-image: url(../images/fon1block1.svg);
+.first-background,
+.overlay {
   background-size: cover;
   background-position: center;
 }
 
+/* Фоновое изображение блок 1 */
+.first-background {
+  position: relative;
+  z-index: -1;
+  width: 100vw;
+  height: 51.04vw;
+  background-image: url(../images/fon1block1.svg);
+}
+
 /* девочка */
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100vw;
   height: 51.04vw;
   background-image: url(../images/devochka.svg);
-  background-size: cover;
-  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* 2 БЛОК */
 /* Второй блок с фоновым изображением */
 .second-background {
-  position: relative;
-  top: 51.04vw;
-  /* left: 0; */
   width: 100vw;
   height: 66.666vw;
   background-image: url(../images/fonblock2.svg);
   background-size: cover;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Контейнер для картин */
 .paintings {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -113,6 +111,7 @@ body.clicked {
 .painting-2 {
   width: 23.95vw;
   height: 37.5vw;
+  transform: translateY(-10vw);
   background-image: url(../images/zerkalo2f1.svg);
   background-size: cover;
   background-position: center;
@@ -129,22 +128,18 @@ body.clicked {
 /* 3 БЛОК */
 /* Третий блок с фоновым изображением */
 .third-background {
-  position: relative;
-  top: 117.708vw;
-  left: 0;
   width: 100vw;
   height: 44.42vw;
   background-image: url(../images/fonblock3.svg);
   background-size: cover;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Контейнер для рук */
 .hands {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -171,20 +166,17 @@ body.clicked {
 }
 /* 4 БЛОК */
 .fourth-background {
-  position: relative;
   width: 100vw;
   height: 73.17vw;
   background-image: url(../images/fonblock4.svg);
   background-size: cover;
   background-position: center;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 /* изображение пазла */
 .puzzle-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) translateY(-10vw);
   width: 50.5vw;
   height: 43.89vw;
   background-image: url(../images/razbito.svg);
@@ -193,7 +185,6 @@ body.clicked {
 }
 /* 5 БЛОК */
 .fifth-background {
-  position: relative;
   width: 100vw;
   height: 41.25vw;
   background-image: url(../images/fonblock5.svg);
