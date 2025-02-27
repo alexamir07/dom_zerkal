@@ -8,6 +8,39 @@ body.clicked {
   cursor: url(../images/kursor2.svg) 35 50, auto;
 }
 /* 1 БЛОК */
+
+/* Глаза */
+.move-area {
+  width: 100%;
+  height: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+.eye {
+  position: relative;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  background-color: cornsilk;
+}
+.eye ::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-image: url(../images/zrachok.svg);
+  border-radius: 100%;
+  position: absolute;
+  top: 13px;
+  left: 10px;
+  z-index: 1;
+}
+
 /* Основной контейнер блок 1 */
 .container {
   position: relative;
@@ -41,6 +74,7 @@ body.clicked {
   background-size: cover;
   background-position: center;
 }
+
 /* 2 БЛОК */
 /* Второй блок с фоновым изображением */
 .second-background {
@@ -143,14 +177,14 @@ body.clicked {
   background-image: url(../images/fonblock4.svg);
   background-size: cover;
   background-position: center;
-  overflow: hidden; /* Добавляем, чтобы скрыть выходящее за границы */
+  overflow: hidden;
 }
-
+/* изображение пазла */
 .puzzle-image {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) translateY(-10vw); /* -320/1000 * 100vw */
+  transform: translate(-50%, -50%) translateY(-10vw);
   width: 50.5vw;
   height: 43.89vw;
   background-image: url(../images/razbito.svg);
