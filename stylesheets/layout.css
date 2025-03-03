@@ -90,13 +90,13 @@ body {
   background-position: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 }
 
 /* Контейнер для картин */
 .paintings {
   width: 100vw;
-  height: 66vw;
+  height: 60vw;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -149,7 +149,7 @@ body {
 
 /* Контейнер для рук */
 .hands {
-  width: 100vw;
+  min-width: 170vw;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -162,6 +162,17 @@ body {
   background-image: url(../images/lefthand.svg);
   background-size: cover;
   background-position: center;
+  position: relative;
+  animation: swingLeftRight 3s ease-in-out infinite alternate;
+}
+
+@keyframes swingLeftRight {
+  0% {
+    transform: translateX(-6vw);
+  }
+  100% {
+    transform: translateX(6vw);
+  }
 }
 
 /* Правая рука */
@@ -206,8 +217,8 @@ body {
   position: absolute;
   top: 2.08vw;
   right: 2.6vw;
-  width: 2.08vw;
-  height: 2.08vw;
+  width: 5.72vw;
+  height: 6.25vw;
   cursor: url(../images/kursor2.svg) 0 0, pointer;
 }
 
@@ -281,4 +292,34 @@ body {
 
 .left-hand.dragging {
   cursor: grabbing;
+}
+.hand-button {
+  position: absolute;
+  top: 55%;
+  right: 20%;
+  width: 8vw;
+  height: 8vw;
+  transform: translate(-50%, -50%);
+  cursor: url(../images/kursor2.svg) 0 0, pointer;
+}
+
+.hand-button img {
+  width: 100%;
+  height: 100%;
+}
+
+.hand-modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  width: 20vw;
+  height: auto;
+  transform: translateX(-10%);
+}
+
+.hand-modal-content img {
+  width: 100%;
+  height: auto;
 }
