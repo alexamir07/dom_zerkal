@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupBackgroundSwitcher() // Вызов новой функции
   clickFrames()
   handDrag()
+  setupHandModal()
 })
 
 // анимация глаз
@@ -169,5 +170,19 @@ function handDrag() {
   document.addEventListener('mouseup', () => {
     isDragging = false
     leftHand.classList.remove('dragging')
+  })
+}
+function setupHandModal() {
+  const handButton = document.querySelector('.hand-button')
+  const handModal = document.getElementById('hand-modal')
+
+  handButton.addEventListener('click', () => {
+    handModal.style.display = 'flex'
+  })
+
+  handModal.addEventListener('click', (event) => {
+    if (event.target.classList.contains('modal')) {
+      handModal.style.display = 'none'
+    }
   })
 }

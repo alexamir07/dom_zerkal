@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   cursor: url(../images/kursor1.svg) 0 0, auto;
+  overflow-x: hidden;
 }
 
 /* body.clicked {
@@ -110,6 +111,7 @@ body {
   background-image: url(../images/zerkalo1f1.svg);
   background-size: cover;
   background-position: center;
+  cursor: url(../images/kursor2.svg) 0 0, pointer;
 }
 
 /* Вторая картина */
@@ -123,6 +125,7 @@ body {
   background-image: url(../images/zerkalo2f1.svg);
   background-size: cover;
   background-position: center;
+  cursor: url(../images/kursor2.svg) 0 0, pointer;
 }
 
 /* Третья картина */
@@ -132,6 +135,7 @@ body {
   background-image: url(../images/zerkalo3f1.svg);
   background-size: cover;
   background-position: center;
+  cursor: url(../images/kursor2.svg) 0 0, pointer;
 }
 /* 3 БЛОК */
 /* Третий блок с фоновым изображением */
