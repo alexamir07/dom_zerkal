@@ -11,7 +11,9 @@
     <div class="container">
       <!-- Первый блок -->
       <div class="first-background">
-        <div class="overlay"></div>
+        <div class="overlay">
+          <img src="./images/fon1block1.svg" class="fondlaydevochki" />
+        </div>
         <div class="eyes">
           <div class="eye">
             <div class="pupil"></div>
@@ -28,9 +30,30 @@
       <!-- Второй блок -->
       <div class="second-background">
         <div class="paintings">
-          <div class="painting-1 painting"></div>
-          <div class="painting-2 painting"></div>
-          <div class="painting-3 painting"></div>
+          <div class="image-container">
+            <img
+              class="mirror"
+              data-index="0"
+              src="./images/zerkalo1f1.svg"
+              alt="Зеркало"
+            />
+          </div>
+          <div class="image-container">
+            <img
+              class="mirror"
+              data-index="1"
+              src="./images/zerkalo2f1.svg"
+              alt="Зеркало"
+            />
+          </div>
+          <div class="image-container">
+            <img
+              class="mirror"
+              data-index="2"
+              src="./images/zerkalo3f1.svg"
+              alt="Зеркало"
+            />
+          </div>
         </div>
         <div class="question-icon" data-modal="modal-2">
           <img src="images/vopros.svg" alt="?" />
@@ -46,11 +69,17 @@
             <img src="images/oskolok1.svg" alt="Осколок" />
           </div>
         </div>
+        <div class="question-icon" data-modal="modal-3">
+          <img src="images/vopros.svg" alt="?" />
+        </div>
       </div>
 
       <!-- 4 БЛОК -->
       <div class="fourth-background">
         <div class="puzzle-image"></div>
+        <div class="question-icon" data-modal="modal-4">
+          <img src="images/vopros.svg" alt="?" />
+        </div>
       </div>
 
       <!-- 5 БЛОК -->
@@ -59,13 +88,18 @@
 
     <!-- Модальное окно -->
     <div id="modal-1" class="modal">
-      <img class="modal-content" src="images/tablichka1.svg" />
+      <img class="modal-content" src="images/popap1.svg" />
     </div>
 
     <div id="modal-2" class="modal">
-      <img class="modal-content" src="images/tablichka1.svg" />
+      <img class="modal-content" src="images/popap2.svg" />
     </div>
-
+    <div id="modal-3" class="modal">
+      <img class="modal-content" src="images/popap3.svg" />
+    </div>
+    <div id="modal-4" class="modal">
+      <img class="modal-content" src="images/popap4.svg" />
+    </div>
     <div id="hand-modal" class="modal">
       <div class="modal-content hand-modal-content">
         <img src="images/oskolok2.svg" alt="Осколок другой" />

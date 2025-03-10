@@ -67,9 +67,12 @@ body {
   z-index: 1;
   width: 100vw;
   height: 51.04vw;
-  background-image: url(../images/fon1block1.svg);
+  /* background-image: url(../images/fon1block1.svg); */
 }
-
+.fondlaydevochki {
+  position: absolute;
+  z-index: -1;
+}
 /* девочка */
 .overlay {
   width: 100vw;
@@ -78,6 +81,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
 }
 
 /* 2 БЛОК */
@@ -97,46 +101,13 @@ body {
 /* Контейнер для картин */
 .paintings {
   width: 100vw;
-  height: 60vw;
+  height: 55vw;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   gap: 2vw;
 }
 
-/* Первая картина */
-.painting-1 {
-  width: 25.52vw;
-  height: 32.81vw;
-  background-image: url(../images/zerkalo1f1.svg);
-  background-size: cover;
-  background-position: center;
-  cursor: url(../images/kursor2.svg) 0 0, pointer;
-}
-
-/* Вторая картина */
-.painting-2 {
-  width: 23.95vw;
-  height: 37.5vw;
-  /* transform: translateY(-10vw); */
-  /* position: absolute;
-  bottom: 500px; */
-  align-self: start;
-  background-image: url(../images/zerkalo2f1.svg);
-  background-size: cover;
-  background-position: center;
-  cursor: url(../images/kursor2.svg) 0 0, pointer;
-}
-
-/* Третья картина */
-.painting-3 {
-  width: 27.6vw;
-  height: 33.85vw;
-  background-image: url(../images/zerkalo3f1.svg);
-  background-size: cover;
-  background-position: center;
-  cursor: url(../images/kursor2.svg) 0 0, pointer;
-}
 /* 3 БЛОК */
 /* Третий блок с фоновым изображением */
 .third-background {
@@ -197,6 +168,7 @@ body {
   overflow: hidden;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 /* изображение пазла */
 .puzzle-image {
@@ -205,6 +177,8 @@ body {
   background-image: url(../images/razbito.svg);
   background-size: cover;
   background-position: center;
+  position: absolute;
+  top: 11%;
 }
 /* 5 БЛОК */
 .fifth-background {
@@ -214,6 +188,8 @@ body {
   background-size: cover;
   background-position: center;
   margin-top: -20.67vw;
+  z-index: 1;
+  position: relative;
 }
 
 /* Значок вопроса */
@@ -255,41 +231,6 @@ body {
   height: 43.22vw;
 }
 
-/* Кнопка закрытия */
-.close {
-  position: absolute;
-  top: 0.52vw;
-  right: 0.78vw;
-  font-size: 1.25vw;
-  cursor: pointer;
-}
-
-@keyframes shake {
-  0% {
-    transform: rotate(0);
-  }
-
-  25% {
-    transform: rotate(3deg);
-  }
-
-  50% {
-    transform: rotate(-3deg);
-  }
-
-  75% {
-    transform: rotate(1.5deg);
-  }
-
-  100% {
-    transform: rotate(0);
-  }
-}
-
-.painting.shake {
-  animation: shake 0.4s ease-in-out;
-}
-
 .left-hand {
   cursor: grab;
 }
@@ -326,4 +267,37 @@ body {
 .hand-modal-content img {
   width: 100%;
   height: auto;
+}
+.image-container {
+  position: relative;
+  cursor: url(../images/kursor2.svg) 0 0, pointer;
+  width: 25vw;
+}
+.mirror {
+  width: 100%;
+  height: auto;
+}
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  75% {
+    transform: rotate(5deg);
+  }
+}
+@media (width < 640px) {
 }

@@ -45,17 +45,6 @@ function moveEyes(e) {
   })
 }
 
-// курсор
-// function cursor() {
-//   document.addEventListener('mousedown', function () {
-//     document.body.classList.add('clicked')
-//   })
-
-//   document.addEventListener('mouseup', function () {
-//     document.body.classList.remove('clicked')
-//   })
-// }
-
 // Функция для работы модальных окон
 function setupModals() {
   const questionIcons = document.querySelectorAll('.question-icon')
@@ -83,55 +72,36 @@ function setupModals() {
 
 // Переключение фона по клику
 function setupBackgroundSwitcher() {
-  const firstBackground = document.querySelector('.first-background')
-  const backgrounds = [
-    'url(images/fon1block1.svg)',
-    'url(images/fon2block1.svg)',
-    'url(images/fon3block1.svg)'
-  ]
+  const firstBackground = document.querySelector('.fondlaydevochki')
+  const backgrounds = ['fon1block1.svg', 'fon2block1.svg', 'fon3block1.svg']
 
   let currentBackgroundIndex = 0
 
   firstBackground.addEventListener('click', () => {
     currentBackgroundIndex = (currentBackgroundIndex + 1) % backgrounds.length
-    firstBackground.style.backgroundImage = backgrounds[currentBackgroundIndex]
+    firstBackground.src = `images/${backgrounds[currentBackgroundIndex]}`
+    console.log('ghbgejgbhxh')
   })
 }
 
 function clickFrames() {
-  const paintings = document.querySelectorAll(
-    '.painting-1, .painting-2, .painting-3'
-  )
-
-  const images = {
-    'painting-1': ['zerkalo1f1.svg', 'zerkalo1f2.svg', 'zerkalo1f3.svg'],
-    'painting-2': ['zerkalo2f1.svg', 'zerkalo2f2.svg', 'zerkalo2f3.svg'],
-    'painting-3': ['zerkalo3f1.svg', 'zerkalo3f2.svg', 'zerkalo3f3.svg']
-  }
-
-  const clickCounts = {
-    'painting-1': 0,
-    'painting-2': 0,
-    'painting-3': 0
-  }
-
-  paintings.forEach((painting) => {
-    painting.addEventListener('click', () => {
-      const paintingClass = painting.classList[0] // например, "painting-1"
-      if (clickCounts[paintingClass] >= 2) return // больше 2 раз нельзя
-
-      painting.classList.add('shake') // запускаем тряску
-
-      setTimeout(() => {
-        painting.classList.remove('shake') // убираем класс после анимации
-
-        clickCounts[paintingClass]++
-
-        const newImage = `url(images/${
-          images[paintingClass][clickCounts[paintingClass]]
-        })`
-        painting.style.backgroundImage = newImage
-      }, 400) // длительность совпадает с CSS-анимацией
+  const imageSets = [
+    ['zerkalo1f1.svg', 'zerkalo1f2.svg', 'zerkalo1f3.svg'],
+    ['zerkalo2f1.svg', 'zerkalo2f2.svg', 'zerkalo2f3.svg'],
+    ['zerkalo3f1.svg', 'zerkalo3f2.svg', 'zerkalo3f3.svg']
+  ]
+  document.querySelectorAll('.mirror').forEach((mirror) => {
+    let clickCount = 0
+    const index = parseInt(mirror.getAttribute('data-index'))
+    mirror.addEventListener('click', () => {
+      if (clickCount < imageSets[index].length - 1) {
+        mirror.classList.add('shake')
+        setTimeout(() => {
+          mirror.classList.remove('shake')
+          clickCount++
+          mirror.src = `images/${imageSets[index][clickCount]}`
+        }, 500)
+      }
     })
   })
 }
