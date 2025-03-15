@@ -76,7 +76,7 @@ function setupBackgroundSwitcher() {
 
   overlay.addEventListener('click', () => {
     currentBackgroundIndex = (currentBackgroundIndex + 1) % backgrounds.length
-    overlay.style.backgroundImage = `url(../images/${backgrounds[currentBackgroundIndex]})`
+    overlay.style.backgroundImage = `url(./images/${backgrounds[currentBackgroundIndex]})`
   })
 }
 
