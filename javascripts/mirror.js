@@ -76,7 +76,7 @@ const initDraggable = (elem) => {
   const checkPosition = () => {
     const currentTop = parseInt(elem.style.top) || 0
     const currentLeft = parseInt(elem.style.left) || 0
-    const tolerance = 100 // допуск в пикселях
+    const tolerance = 150 // допуск в пикселях
 
     // Проверяем, находится ли элемент в допустимой зоне
     const isCorrect =
