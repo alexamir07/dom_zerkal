@@ -1,46 +1,96 @@
-@media all and (max-width: 769px) {
+@media (width < 640px) {
+  .question-icon {
+    width: 11vw;
+    top: 5vw;
+    right: 4.6vw;
+  }
+
+  .first-background {
+    height: 50vh;
+  }
+  .overlay {
+    height: 100%;
+  }
+  #girlImage {
+    top: 65%;
+  }
+  .eyes {
+    top: 55%;
+  }
+
   .second-background {
-    z-index: 2;
-    height: 195.9vw;
-    background-image: url(../images/block2-mobile.png);
+    height: 70vh;
+    background-image: url(/images/block2-mobile.png);
   }
   .paintings {
-    width: 100%;
-    height: 80%;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-    position: relative;
-    padding: 6vw;
-    /* gap: 2vw; */
+    padding: 10vw 10vw;
+    height: 80%;
   }
-
   .image-container {
-    width: 45%;
+    width: 50%;
+    height: 40%;
+    align-self: start;
   }
-  .image-container:nth-of-type(2) {
+  .image-container:nth-child(2) {
+    align-self: end;
+  }
+  .mirror:nth-child(1) {
+    top: 1vw;
     position: absolute;
-    top: 31%;
-    right: 6vw;
   }
-  .question-icon {
-    top: 6.35vw;
-    right: 3.32vw;
-    width: 12.43vw;
-    height: 13.81vw;
-  }
-  .question-icon[data-modal='modal-3'] {
-    transform: rotate(-90deg) scale(0.45);
-    top: -2.2vw;
-    left: 0;
-  }
-
   .third-background {
-    transform: rotate(90deg) scale(2.3);
-    margin-top: 92vw;
+    height: 70vh;
   }
-
+  .hands {
+    position: relative;
+    flex-direction: column;
+    justify-content: end;
+    height: 200%;
+  }
+  .left-hand,
+  .right-hand {
+    transform: rotate(90deg); /* Поворот на 90 градусов */
+    flex: 1;
+    width: 100%;
+  }
+  .right-hand {
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .left-hand {
+    z-index: 1;
+  }
+  .left-hand-inner {
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .hand-button {
+    top: 53%;
+    left: 40%;
+    width: 20vw;
+    height: auto;
+    transform: rotate(90deg);
+  }
+  .hand-modal-content {
+    width: 50vw;
+  }
   .fourth-background {
-    margin-top: 91vw;
+    height: 50vh;
+    background-image: url(/images/block4-mobile.png);
+  }
+  .puzzle-frame {
+    width: 70%;
+    top: 7%;
+    left: 12%;
+  }
+  .fifth-background {
+    height: 75vh;
+    background-image: url(/images/block5-mobile.png);
+  }
+  .final-image {
+    width: 100%;
+    height: 50%;
+    left: 0;
   }
 }

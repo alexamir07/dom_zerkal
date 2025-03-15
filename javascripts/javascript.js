@@ -1,12 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // cursor();
-  document.addEventListener('mousemove', moveEyes)
-  setupModals()
-  setupBackgroundSwitcher() // Вызов новой функции
-  clickFrames()
-  handDrag()
-  setupHandModal()
-})
+document.addEventListener('mousemove', moveEyes)
+setupModals()
+setupBackgroundSwitcher() // Вызов новой функции
+clickFrames()
+handDrag()
+setupHandModal()
 
 // анимация глаз
 function moveEyes(e) {
@@ -72,15 +69,14 @@ function setupModals() {
 
 // Переключение фона по клику
 function setupBackgroundSwitcher() {
-  const firstBackground = document.querySelector('.fondlaydevochki')
+  const overlay = document.querySelector('.overlay')
   const backgrounds = ['fon1block1.svg', 'fon2block1.svg', 'fon3block1.svg']
 
   let currentBackgroundIndex = 0
 
-  firstBackground.addEventListener('click', () => {
+  overlay.addEventListener('click', () => {
     currentBackgroundIndex = (currentBackgroundIndex + 1) % backgrounds.length
-    firstBackground.src = `images/${backgrounds[currentBackgroundIndex]}`
-    console.log('ghbgejgbhxh')
+    overlay.style.backgroundImage = `url(../images/${backgrounds[currentBackgroundIndex]})`
   })
 }
 
@@ -142,6 +138,7 @@ function handDrag() {
     leftHand.classList.remove('dragging')
   })
 }
+
 function setupHandModal() {
   const handButton = document.querySelector('.hand-button')
   const handModal = document.getElementById('hand-modal')

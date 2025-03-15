@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Дом Зеркал</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
-    <script src="javascripts/javascript.js"></script>
   </head>
   <body>
     <div class="container">
       <!-- Первый блок -->
       <div class="first-background">
         <div class="overlay">
-          <img src="./images/fon1block1.svg" class="fondlaydevochki" />
-        </div>
-        <div class="eyes">
-          <div class="eye">
-            <div class="pupil"></div>
+          <img src="/images/devochka.svg" alt="" id="girlImage" />
+          <div class="eyes">
+            <div class="eye">
+              <div class="pupil"></div>
+            </div>
+            <div class="eye">
+              <div class="pupil"></div>
+            </div>
           </div>
-          <div class="eye">
-            <div class="pupil"></div>
-          </div>
         </div>
+
         <div class="question-icon" data-modal="modal-1">
           <img src="images/vopros.svg" alt="?" />
         </div>
@@ -63,7 +63,9 @@
       <!-- Третий блок -->
       <div class="third-background">
         <div class="hands">
-          <div class="left-hand"></div>
+          <div class="left-hand">
+            <div class="left-hand-inner"></div>
+          </div>
           <div class="right-hand"></div>
           <div class="hand-button">
             <img src="images/oskolok1.svg" alt="Осколок" />
@@ -76,7 +78,77 @@
 
       <!-- 4 БЛОК -->
       <div class="fourth-background">
-        <div class="puzzle-image"></div>
+        <div id="container">
+          <div class="puzzle-frame-container">
+            <!-- Рамка -->
+            <img src="images/razbito.svg" class="puzzle-frame" alt="Рамка" />
+
+            <!-- Пазлы -->
+            <div
+              class="draggable-elem"
+              data-target-top="80"
+              data-target-left="160"
+            >
+              <img src="images/pazl1.svg" alt="" />
+            </div>
+            <div
+              class="draggable-elem"
+              data-target-top="80"
+              data-target-left="500"
+            >
+              <img src="images/pazl2.svg" alt="" />
+            </div>
+            <div
+              class="draggable-elem"
+              data-target-top="80"
+              data-target-left="560"
+            >
+              <img src="images/pazl3.svg" alt="" />
+            </div>
+            <div
+              class="draggable-elem"
+              data-target-top="140"
+              data-target-left="90"
+            >
+              <img src="images/pazl4.svg" alt="" />
+            </div>
+            <div
+              class="draggable-elem"
+              data-target-top="270"
+              data-target-left="320"
+            >
+              <img src="images/pazl5.svg" alt="" />
+            </div>
+            <div
+              class="draggable-elem"
+              data-target-top="470"
+              data-target-left="560"
+            >
+              <img src="images/pazl6.svg" alt="" />
+            </div>
+            <div
+              class="draggable-elem"
+              data-target-top="470"
+              data-target-left="90"
+            >
+              <img src="images/pazl7.svg" alt="" />
+            </div>
+            <div
+              class="draggable-elem"
+              data-target-top="530"
+              data-target-left="200"
+            >
+              <img src="images/pazl8.svg" alt="" />
+            </div>
+            <div
+              class="draggable-elem"
+              data-target-top="540"
+              data-target-left="530"
+            >
+              <img src="images/pazl9.svg" alt="" />
+            </div>
+          </div>
+        </div>
         <div class="question-icon" data-modal="modal-4">
           <img src="images/vopros.svg" alt="?" />
         </div>
@@ -105,5 +177,7 @@
         <img src="images/oskolok2.svg" alt="Осколок другой" />
       </div>
     </div>
+    <script src="javascripts/javascript.js"></script>
+    <script src="javascripts/mirror.js"></script>
   </body>
 </html>

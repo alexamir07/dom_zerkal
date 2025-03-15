@@ -1,0 +1,104 @@
+/* Глобальный контейнер */
+#container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Центрирование по вертикали */
+}
+
+/* Контейнер для рамки и пазлов */
+.puzzle-frame-container {
+  position: relative;
+  width: 50vw;
+  height: 42vw;
+  transition: opacity 0.5s;
+}
+
+/* Рамка */
+.puzzle-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.draggable-elem {
+  position: absolute;
+  cursor: url(../images/kursor2.svg) 0 0, pointer;
+  transition: transform 0.2s; /* Для плавности */
+}
+/* Начальные позиции для каждого элемента */
+.draggable-elem:nth-child(1) {
+  top: 10vw;
+  left: 20vw;
+}
+.draggable-elem:nth-child(2) {
+  top: 5vw;
+  left: -30vw;
+}
+.draggable-elem:nth-child(3) {
+  top: 1vw;
+  left: 20vw;
+}
+.draggable-elem:nth-child(4) {
+  top: 10vw;
+  left: 45.41vw;
+}
+.draggable-elem:nth-child(5) {
+  top: 30vw;
+  left: 30vw;
+}
+.draggable-elem:nth-child(6) {
+  top: 25vw;
+  left: 10.41vw;
+}
+.draggable-elem:nth-child(7) {
+  top: -5vw;
+  left: 15vw;
+}
+.draggable-elem:nth-child(8) {
+  top: 10vw;
+  left: 29vw;
+}
+.draggable-elem:nth-child(9) {
+  top: 30vw;
+  left: -25vw;
+}
+
+/* Обводка через CSS-фильтр */
+.draggable-elem.correct img {
+  filter: drop-shadow(0 3px 5px rgb(99, 55, 26)); /* Тонкая обводка */
+}
+.draggable-elem.fixed {
+  cursor: default;
+  pointer-events: none; /* Запрещает взаимодействие */
+  /* transition: transform 0.2s; */
+}
+.final-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media (width < 640px) {
+  .draggable-elem {
+    width: 20vw;
+  }
+  .draggable-elem img {
+    width: 100%;
+    height: auto;
+  }
+  .puzzle-frame-container {
+    width: 100%;
+    height: 100%;
+  }
+  .puzzle-frame {
+    width: 30%;
+    height: auto;
+    top: 15%;
+    left: 30%;
+  }
+}
