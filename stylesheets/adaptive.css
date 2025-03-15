@@ -20,7 +20,7 @@
 
   .second-background {
     height: 70vh;
-    background-image: url(/images/block2-mobile.png);
+    background-image: url(../images/block2-mobile.png);
   }
   .paintings {
     flex-direction: column;
@@ -77,7 +77,7 @@
   }
   .fourth-background {
     height: 50vh;
-    background-image: url(/images/block4-mobile.png);
+    background-image: url(../images/block4-mobile.png);
   }
   .puzzle-frame {
     width: 70%;
@@ -86,7 +86,7 @@
   }
   .fifth-background {
     height: 75vh;
-    background-image: url(/images/block5-mobile.png);
+    background-image: url(../images/block5-mobile.png);
   }
   .final-image {
     width: 100%;
